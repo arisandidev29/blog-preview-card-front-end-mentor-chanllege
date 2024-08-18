@@ -53,11 +53,12 @@
     .card-category {
       display: block;
       width: max-content;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       background-color: var(--yellow-clr);
       padding: .4rem .6rem;
       font-weight: 700;
       margin-top : .8rem;
+      border-radius: .5rem;
     }
 
     .card-published {
@@ -67,8 +68,13 @@
 
     .card-title {
       font-size: 1.5rem;
-      color: var(--yellow-clr);
       margin-bottom: 1rem;
+      transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .card-title:hover {
+      cursor: pointer;
+      color: var(--yellow-clr);
     }
 
     .card-description {
@@ -101,7 +107,7 @@
   <main>
       <img class="card-image" src="assets/images/illustration-article.svg" alt="card-image">
       <span class="card-category">Learning</span>
-      <p class="card-published">Published 21 DEc 2023</p>
+      <p class="card-published">Published 21 Dec 2023</p>
       <h1 class="card-title">HTML & CSS Foundation</h1>
       <p class="card-description">These languages are the backbone of every website, defining structure, conten, and presentaion.</p>
 
