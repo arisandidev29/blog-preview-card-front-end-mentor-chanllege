@@ -2,33 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    * {
+      margin : 0;
+      padding : 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white-clr : hsl(0, 0%, 100%);
+      --yellow-clr :  hsl(47, 88%, 63%);
+      --grey-clr-1 : hsl(0, 0%, 42%);
+      --grey-clr-2 : hsl(0, 0%, 7%);
+    }
+
+    @font-face {
+      font-family: figgtree;
+      src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+    }
+
+    body {
+      font-family: figgtree;
+      display: grid;
+      width: 100%;
+      height: 100vh;
+      place-content: center;
+      background-color: var(--yellow-clr);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    main {
+      width: 90%;
+      max-width: 24rem;
+      margin: auto ;
+      padding: 1rem;
+      border-radius: .5rem;
+      background-color: var(--white-clr);
+    }
+
+    .card-image {
+      border-radius: .5rem;
+    }
+    .card-category {
+      display: block;
+      width: max-content;
+      font-size: 1.5rem;
+      background-color: var(--yellow-clr);
+      padding: .4rem .6rem;
+      font-weight: 700;
+      margin-top : .8rem;
+    }
+
+    .card-published {
+      font-weight: 600;
+      margin-block: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      color: var(--yellow-clr);
+      margin-bottom: 1rem;
+    }
+
+    .card-description {
+      line-height: 1.5;
+      color: var(--grey-clr-1);
+      font-weight: 600;
+    }
+
+    .card-author {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 2rem;
+    }
+
+    .author-img {
+      width: 35px;
+    }
+
+    .author-name {
+      font-weight: 600;
+    }
+
+
+
+ 
   </style>
 </head>
 <body>
+  <main>
+      <img class="card-image" src="assets/images/illustration-article.svg" alt="card-image">
+      <span class="card-category">Learning</span>
+      <p class="card-published">Published 21 DEc 2023</p>
+      <h1 class="card-title">HTML & CSS Foundation</h1>
+      <p class="card-description">These languages are the backbone of every website, defining structure, conten, and presentaion.</p>
 
-  Learning
+      <div class="card-author">
+          <img src="assets/images/image-avatar.webp" alt="author image" class="author-img">
+          <span class="author-name">Greeg Hooper</span>
+      </div>
 
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main> 
 </body>
 </html>
